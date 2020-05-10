@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>MetCheck.API</id>
+    <description>MetCheck API</description>
+    <tags>Weather MetCheck</tags>
+    <version>1.0.0</version>
+    <authors>Ryan Powell</authors>
+    <owners>Ryan Powell</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/Ryandev/MetCheckAPI</projectUrl>
+    <title>MetCheckAPI</title>
+    <copyright>Copyright 2020</copyright>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1" />
+    </dependencies>
+    <repository type="git" url="https://github.com/Ryandev/MetCheckAPI.git" branch="master" commit="$commit$" />
+  </metadata>
+  <files>
+    <file src="MetCheckAPI\bin\Release\netstandard2.1\*" target="lib/netstandard2.1/" />
+  </files>  
+</package>

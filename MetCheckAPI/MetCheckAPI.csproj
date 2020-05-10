@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <NeutralLanguage>en-US</NeutralLanguage>
+
+    <Product>MetCheckAPI</Product>
+    <Copyright>Copyright © Ryan Powell 2020</Copyright>
+    <Summary>MetCheck API for .NET</Summary>
+    <Title>MetCheckAPI</Title>
+    <PackageId>MetCheckAPI</PackageId>
+    <PackageTags>weather metcheck api MetCheck</PackageTags>
+    <PackageProjectUrl>https://www.github.com/Ryandev/MetCheckAPI</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl> 
+    <RootNamespace>MetCheckAPI</RootNamespace>
+    <AssemblyName>MetCheckAPI</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="4.7.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+  </ItemGroup>
+</Project>

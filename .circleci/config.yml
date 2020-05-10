@@ -1,0 +1,45 @@
+version: 2.1
+
+workflows:
+  build_test_archive:
+    jobs:
+      - build_test_archive
+
+orbs:
+  win: circleci/windows@2.2.0
+
+jobs:
+  build_test_archive:
+    description: Setup,build,test,publish application
+    executor: win/default
+    steps:
+      - checkout
+      - run:
+          name: "Install project dependencies"
+          command: dotnet.exe restore
+      - run:
+          name: "Build project"
+          command: dotnet.exe build MetCheckAPI/MetCheckAPI.csproj --configuration Release
+      - run:
+          name: "Run Tests"
+          command: dotnet.exe test UnitTest/UnitTest.csproj -v n --results-directory:test_coverage --collect:"Code Coverage"
+      - store_test_results:
+          path: test_coverage
+      - run:
+          name: "Publish project"
+          command: dotnet.exe publish ./MetCheckAPI/MetCheckAPI.csproj -c Release
+      - run:
+          name: "Get Last Hash (glh)"
+          command: git log -n 1 master --pretty=format:"%H">glh.txt
+      - run:
+          name: "Load glh to env"
+          command: Set /P glh=<glh.txt
+      - run:
+          name: "Publish nuget"
+          command: nuget.exe pack -OutputFileNamesWithoutVersion -properties commit="%glh%"
+      - store_artifacts:
+          path: MetCheck.API.nupkg
+      - store_artifacts:
+          path: MetCheckAPI/bin/Release/netstandard2.1/MetCheckAPI.dll
+      - store_artifacts:
+          path: MetCheckAPI/bin/Release/netstandard2.1/MetCheckAPI.deps.json

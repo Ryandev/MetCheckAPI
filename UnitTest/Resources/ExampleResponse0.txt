@@ -1,0 +1,39 @@
+{
+	"metcheckData": {
+		"forecastLocation": {
+			"forecast": [{
+				"temperature": "13",
+				"dewpoint": "7",
+				"rain": "1.0",
+				"freezinglevel": "2798",
+				"uvIndex": "3",
+				"totalcloud": "91",
+				"lowcloud": "2",
+				"medcloud": "78",
+				"highcloud": "90",
+				"humidity": "63",
+				"windspeed": "6",
+				"meansealevelpressure": "1017.92",
+				"windgustspeed": "6",
+				"winddirection": "97",
+				"windletter": "E",
+				"icon": "PC",
+				"iconName": "Partly Cloudy",
+				"chanceofrain": "3",
+				"chanceofsnow": "4",
+				"dayOfWeek": "6",
+				"weekday": "Friday",
+				"sunrise": "5:52",
+				"sunset": "18:59",
+				"dayOrNight": "D",
+				"utcTime": "2020-05-08T10:00:00.00"
+			}]
+		}
+	},
+	"feedCreation": "2020-05-08T11:11:04.00",
+	"feedCreator": "Metcheck.com",
+	"feedModel": "GHX5",
+	"feedModelRun": "00Z",
+	"feedModelRunInitialTime": "2020-05-08T00:00:00.00",
+	"feedResolution": "0.01"
+}

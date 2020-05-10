@@ -1,0 +1,15 @@
+*.nupkg
+.vs
+test_coverage
+Example/bin
+Example/obj
+Example/debug
+
+MetCheckAPI/bin
+MetCheckAPI/obj
+MetCheckAPI/debug
+
+UnitTest/bin
+UnitTest/obj
+UnitTest/debug
+
